@@ -1,0 +1,147 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    list-style: none;
+}
+
+:root{
+    --primaryColor:#6d28d9;
+    --secondaryColor:#ede9fe;
+    --mainWhite:#fff;
+    --mainBlack:#222;
+    --mainGray:#7c7c7c;
+    --mainSpace:0.1rem;
+    --mainTransotion:all 0.3s linear;
+    --mainRed:#db2777;
+    --bodyColor:#f6f6f6;
+    --mainWidth:25rem;
+}
+
+body{
+    /* font-family: ; */
+    color: var(--mainBlack);
+    background-color: var(--bodyColor);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header{
+    min-height: 20vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.form-container{
+    display: flex;
+}
+
+.todo-container{
+    /* width: var(--mainWidth); */
+width: 25rem;
+}
+
+form{
+    width: 25rem;
+    /* width: var(--mainWidth); */
+    background-color: var(--mainWhite);
+    display: flex;
+    justify-content: space-between;
+    margin: 0 1.5rem 0 0;
+}
+
+form input{
+    flex: 1;
+}
+
+form input,
+form button{
+    border: none;
+    outline: none;
+    background-color: var(--mainWhite);
+    font-size: 1rem;
+    padding: 0.5rem;
+}
+
+form button{
+    color: var(--primaryColor);
+    cursor: pointer;
+    /* transition: all 0.3s ease-in-out; */
+}
+
+form button:hover{
+    background-color: var(--primaryColor);
+    color: var(--mainWhite);
+    transition: all 0.5s ease-in-out;
+}
+
+.todo{
+    background-color: var(--secondaryColor);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0.5rem 0;
+    transition: all 0.3s ease-in-out;
+}
+
+.todo li{
+    flex: 1;
+    padding: 0.5rem;
+}
+
+.todo span{
+  display: block;
+  font-size: 1.2rem;
+  padding: 0.5rem;
+  cursor: pointer;
+}
+
+.fa-circle-check{
+color: var(--primaryColor);
+}
+
+.fa-trash{
+    color: var(--mainRed);
+}
+
+.comple{
+    text-decoration: line-through;
+    opacity: 0.5;
+}
+
+select{
+    appearance: none;
+    border: none;
+    outline: none;
+    width: 100%;
+    padding: 0.5rem;
+    color: var(--primaryColor);
+    cursor: pointer;
+}
+
+.select{
+    background-color: #fff;
+    cursor: pointer;
+    width: 8rem;
+    font-weight: bold;
+    position: relative;
+}
+
+.select::after{
+    content: "\25bc";
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 0.5rem;
+    color: var(--primaryColor);
+    pointer-events: none;
+}
